@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from myapp.views import (homepage, hello, all_analytics, redirect_url)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('myapp.urls')),
+    path('', homepage),
+    path('hello', hello),
+    path('all-analytics', all_analytics),
+    path('<slug:short_url>', redirect_url),
 ]
