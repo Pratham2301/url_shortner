@@ -74,4 +74,9 @@ def all_analytics(request):
     dict={
         "obj":obj
     }
+    
+    print(dict)
+    
     return render(request,"all_analytics.html",dict)
+
+
